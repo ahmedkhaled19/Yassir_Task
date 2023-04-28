@@ -1,6 +1,6 @@
 /**
  * Created by Ahmed Khaled on 09/08/2021.
- * Last update on 31/1/2022
+ * Last update on 28/4/2022
  */
 
 object Versions {
@@ -36,7 +36,7 @@ object Versions {
     const val ROOM_VERSION = "2.4.1"
 
     //Hilt
-    const val HILT_VERSION = "2.40.5"
+    const val HILT_VERSION = "2.44"
     const val HILT_VIEW_MODEL_VERSION = "1.0.0-alpha03"
     const val HILT_COMPILER_VERSION = "1.0.0"
 
@@ -125,10 +125,7 @@ object Room {
 
 object Hilt {
     const val HILT_ANDROID = "com.google.dagger:hilt-android:${Versions.HILT_VERSION}"
-    const val HILT_KPT = "com.google.dagger:hilt-android-compiler:${Versions.HILT_VERSION}"
-    const val HILT_VIEW_MODEL =
-        "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.HILT_VIEW_MODEL_VERSION}"
-    const val HILT_COMPILER_KPT = "androidx.hilt:hilt-compiler:${Versions.HILT_COMPILER_VERSION}"
+    const val HILT_COMPILER_KPT = "com.google.dagger:hilt-compiler:${Versions.HILT_VERSION}"
 }
 
 object Coroutines {

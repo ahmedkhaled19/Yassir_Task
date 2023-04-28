@@ -40,6 +40,8 @@ dependencies {
     //Modules
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     api project(":core")
+    api project(":data")
+    api project(":entities")
 
 
     implementation(Androidx.CORE_KTX)
@@ -50,6 +52,4 @@ dependencies {
     //Hilt Injection
     implementation(Hilt.HILT_ANDROID)
     kapt(Hilt.HILT_COMPILER_KPT)
-    implementation(Hilt.HILT_VIEW_MODEL)
-    kapt(Hilt.HILT_KPT)
 }

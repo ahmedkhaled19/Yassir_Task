@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'android.ahmed.khaled.core'
+    namespace 'android.ahmed.khaled.data'
     compileSdkVersion(AppConfig.compileSdkVersion)
 
     defaultConfig {
@@ -31,30 +31,39 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(":entities")
 
+    implementation(Kotlin.KOTLIN_STDLIB)
     implementation(Androidx.CORE_KTX)
     implementation(Androidx.APP_COMPAT)
-    implementation(Kotlin.KOTLIN_STDLIB)
     implementation(Material.MATERIAL)
 
-    // architecture
+    //architecture
     implementation(Androidx.VIEW_MODEL)
     implementation(Androidx.LIVEDATA)
     implementation(Androidx.RUNTIME)
     implementation(Androidx.EXTENSIONS)
 
+    // network
+    implementation(Network.RETROFIT)
+    implementation(Network.RETROFIT_CONVERTER)
+    implementation(Network.GSON)
+    implementation(Network.LOGGING_INTERCEPTOR)
+
     //Hilt Injection
     implementation(Hilt.HILT_ANDROID)
     kapt(Hilt.HILT_COMPILER_KPT)
 
-    // network
-    implementation(Network.RETROFIT)
+    //Coroutines
+    implementation(Coroutines.COROUTINES_ANDROID)
+
+    //Unit Test
+    testImplementation(Testing.JUNIT_TEST)
+    testImplementation(Testing.GOOGLE_TRUTH)
+    testImplementation(Testing.OKHTTP_MOCK_WEB_SERVER)
 
 }
