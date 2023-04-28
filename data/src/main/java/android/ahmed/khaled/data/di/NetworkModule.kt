@@ -42,7 +42,7 @@ object NetworkModule {
                 chain.proceed(newRequest)
             }
 
-        
+
 //        if (BuildConfig.DEBUG) {
 //            builder.addInterceptor(loggingInterceptor)
 //        }
