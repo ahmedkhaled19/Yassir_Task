@@ -1,22 +1,20 @@
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id 'com.android.library'
+    id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
 }
 
 android {
-    namespace 'com.example.ahmed.khaled.yassirtask'
-    compileSdk 33
+    namespace 'android.ahmed.khaled.core'
+    compileSdkVersion(AppConfig.compileSdkVersion)
 
     defaultConfig {
-        applicationId(AppConfig.applicationId)
-        minSdk(AppConfig.minSdkVersion)
-        targetSdk(AppConfig.targetSdkVersion)
-        versionCode(AppConfig.versionCode)
-        versionName(AppConfig.versionName)
+        minSdkVersion(AppConfig.minSdkVersion)
+        targetSdkVersion(AppConfig.compileSdkVersion)
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -33,23 +31,32 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
-
-    //Modules
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api project(":core")
-
 
     implementation(Androidx.CORE_KTX)
     implementation(Androidx.APP_COMPAT)
     implementation(Kotlin.KOTLIN_STDLIB)
     implementation(Material.MATERIAL)
 
+    // architecture
+    implementation(Androidx.VIEW_MODEL)
+    implementation(Androidx.LIVEDATA)
+    implementation(Androidx.RUNTIME)
+    implementation(Androidx.EXTENSIONS)
+
     //Hilt Injection
     implementation(Hilt.HILT_ANDROID)
     kapt(Hilt.HILT_COMPILER_KPT)
     implementation(Hilt.HILT_VIEW_MODEL)
     kapt(Hilt.HILT_KPT)
+
+    // network
+    implementation(Network.RETROFIT)
+
 }

@@ -1,6 +1,6 @@
 /**
  * Created by Ahmed Khaled on 09/08/2021.
- * Lasr update on 31/1/2022
+ * Last update on 31/1/2022
  */
 
 object Versions {
@@ -9,12 +9,12 @@ object Versions {
     const val ANDROID_CORE_VERSION = "1.10.0"
     const val APP_COMPAT_VERSION = "1.5.1"
     const val LIFECYCLE_VIEW_MODEL_VERSION = "2.5.1"
-    const val LIFECYCLE_LIVEDATA_VERSION = "2.5.1"
-    const val LIFECYCLE_RUNTIME_VERSION = "2.5.1"
-    const val LIFECYCLE_EXTENSIONS_VERSION = "2.5.1"
+    const val LIFECYCLE_LIVEDATA_VERSION = "2.2.0"
+    const val LIFECYCLE_RUNTIME_VERSION = "2.2.0"
+    const val LIFECYCLE_EXTENSIONS_VERSION = "2.2.0"
 
     //Kotlin
-    const val KOTLIN_VERSION = "1.6.21"
+    const val KOTLIN_VERSION = "1.8.0"
 
     //Materials
     const val MATERIALS_VERSION = "1.8.0"
