@@ -26,7 +26,7 @@ abstract class BaseRemoteDataSourceTest {
         .writeTimeout(1, TimeUnit.SECONDS)
         .build()
 
-    protected val moviesEndPoints = Retrofit.Builder()
+    protected val moviesEndPoints: MoviesEndPoints = Retrofit.Builder()
         .baseUrl(mockWebServer.url(""))
         .client(client)
         .addConverterFactory(GsonConverterFactory.create())

@@ -43,7 +43,7 @@ dependencies {
     api project(":data")
     api project(":entities")
     api project(":domain")
-
+    api project(":homeScreen")
 
     implementation(Androidx.CORE_KTX)
     implementation(Androidx.APP_COMPAT)

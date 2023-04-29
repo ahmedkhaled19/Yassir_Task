@@ -7,8 +7,10 @@
     <string name="retry">Retry</string>
     <string name="title">Movies Home</string>
     <string name="movie_title">"Title : "</string>
+    <string name="movie_original_title">"Original Title : "</string>
     <string name="release_date">"Release Date : "</string>
     <string name="vote_rate">"Vote Rate : "</string>
+    <string name="vote_count">"Vote Count : "</string>
     <string name="overview">"Overview : "</string>
     <string name="search_query">search</string>
 </resources>

@@ -12,12 +12,14 @@ object Versions {
     const val LIFECYCLE_LIVEDATA_VERSION = "2.2.0"
     const val LIFECYCLE_RUNTIME_VERSION = "2.2.0"
     const val LIFECYCLE_EXTENSIONS_VERSION = "2.2.0"
+    const val FRAGMENT_KTX_VERSION = "1.5.2"
 
     //Kotlin
     const val KOTLIN_VERSION = "1.8.0"
 
     //Materials
     const val MATERIALS_VERSION = "1.8.0"
+    const val CONSTRAINT_LAYOUT_VERSION = "2.1.4"
     const val SWIPE_REFRESH_VERSION = "1.1.0"
 
     //Navigation Fragment
@@ -37,8 +39,6 @@ object Versions {
 
     //Hilt
     const val HILT_VERSION = "2.44"
-    const val HILT_VIEW_MODEL_VERSION = "1.0.0-alpha03"
-    const val HILT_COMPILER_VERSION = "1.0.0"
 
     //Coroutines
     const val COROUTINES_VERSION = "1.3.9"
@@ -91,10 +91,12 @@ object Androidx {
         "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.LIFECYCLE_RUNTIME_VERSION}"
     const val EXTENSIONS =
         "androidx.lifecycle:lifecycle-extensions:${Versions.LIFECYCLE_EXTENSIONS_VERSION}"
+    const val FRAGMENT_KTX = "androidx.fragment:fragment-ktx:${Versions.FRAGMENT_KTX_VERSION}"
 }
 
 object Material {
     const val MATERIAL = "com.google.android.material:material:${Versions.MATERIALS_VERSION}"
+    const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT_VERSION}"
     const val SWIPE_REFRESH_LAYOUT =
         "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.SWIPE_REFRESH_VERSION}"
 }

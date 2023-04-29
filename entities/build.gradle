@@ -40,9 +40,4 @@ dependencies {
 
     // network
     implementation(Network.GSON)
-
-    //Room
-    implementation(Room.ROOM_RUNTIME)
-    implementation(Room.ROOM_KTX)
-    kapt(Room.ROOM_KPT)
 }

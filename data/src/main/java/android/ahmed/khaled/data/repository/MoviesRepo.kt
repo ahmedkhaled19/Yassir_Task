@@ -1,6 +1,7 @@
 package android.ahmed.khaled.data.repository
 
 import android.ahmed.khaled.data.restful.MoviesEndPoints
+import android.ahmed.khaled.entities.remote.RemoteMovies
 import android.ahmed.khaled.entities.responses.MoviesResponse
 import javax.inject.Inject
 
@@ -16,4 +17,7 @@ class MoviesRepo @Inject constructor(
         return moviesEndPoints.getTopRatedMovies(PageNumber)
     }
 
+    suspend fun getMovieDetail(movieId : Int) : RemoteMovies {
+        return moviesEndPoints.getMovieDetail(movieId)
+    }
 }

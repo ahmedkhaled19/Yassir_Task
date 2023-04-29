@@ -5,7 +5,7 @@ import android.os.Parcelable
 
 
 data class Movie(
-    var externalId: Long = 0,
+    var externalId: Int = 0,
     var movieTitle: String = "",
     var posterPath: String = "",
     var overview: String = "",
@@ -15,18 +15,17 @@ data class Movie(
 ) : Parcelable {
 
     constructor(parcel: Parcel) : this(
-        parcel.readLong(),
+        parcel.readInt(),
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readDouble(),
         ArrayList(),
         parcel.readString()!!
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeLong(externalId)
+        parcel.writeInt(externalId)
         parcel.writeString(movieTitle)
         parcel.writeString(posterPath)
         parcel.writeString(overview)

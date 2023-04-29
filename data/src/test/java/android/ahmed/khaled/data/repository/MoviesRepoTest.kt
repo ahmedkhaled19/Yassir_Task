@@ -10,7 +10,7 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Test
 
 /**
- * Created by Ahmed Khaled on 15/03/2022.
+ * Created by Ahmed Khaled on 29/4/2023.
  */
 
 @ExperimentalCoroutinesApi
@@ -25,7 +25,7 @@ class MoviesRepoTest : BaseRemoteDataSourceTest(){
     fun `should fetch movies correctly given 200 response`() {
         runBlocking {
             mockWebServer.enqueueResponse("MoviesSuccessResponse.json", 200)
-            val actualResults = moviesEndPoints.getTopRatedMovies()
+            val actualResults = moviesEndPoints.getTopRatedMovies(1)
             Truth.assertThat(actualResults.page).isEqualTo(expectedValue.page)
             Truth.assertThat(actualResults.results).containsExactlyElementsIn(expectedValue.results)
         }

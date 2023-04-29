@@ -9,7 +9,7 @@ import org.junit.Before
 import org.junit.Test
 
 /**
- * Created by Ahmed Khaled on 17/03/2022.
+ * Created by Ahmed Khaled on 29/4/2023.
  */
 
 class MovieMapperTest {
@@ -29,7 +29,7 @@ class MovieMapperTest {
         assertThat(localMovie.movieTitle).isEqualTo(remoteMovie.title)
         assertThat(localMovie.posterPath).isEqualTo("${IMAGE_BASE_URL}${remoteMovie.poster_path}")
         assertThat(localMovie.overview).isEqualTo(remoteMovie.overview)
-        assertThat(localMovie.voteAverage).isEqualTo(remoteMovie.vote_average)
+        assertThat(localMovie.voteAverage).isEqualTo(remoteMovie.voteAverage)
         assertThat(localMovie.releaseDate).isEqualTo(remoteMovie.release_date)
     }
 
@@ -41,7 +41,7 @@ class MovieMapperTest {
         assertThat(localMovie.movieTitle).isEqualTo("")
         assertThat(localMovie.posterPath).isEqualTo("${IMAGE_BASE_URL}${remoteMovieWithNullTitle.poster_path}")
         assertThat(localMovie.overview).isEqualTo(remoteMovieWithNullTitle.overview)
-        assertThat(localMovie.voteAverage).isEqualTo(remoteMovieWithNullTitle.vote_average)
+        assertThat(localMovie.voteAverage).isEqualTo(remoteMovieWithNullTitle.voteAverage)
         assertThat(localMovie.releaseDate).isEqualTo(remoteMovieWithNullTitle.release_date)
     }
 
@@ -53,7 +53,7 @@ class MovieMapperTest {
         assertThat(localMovie.movieTitle).isEqualTo(remoteMovieWithNullDate.title)
         assertThat(localMovie.posterPath).isEqualTo("${IMAGE_BASE_URL}${remoteMovieWithNullDate.poster_path}")
         assertThat(localMovie.overview).isEqualTo(remoteMovieWithNullDate.overview)
-        assertThat(localMovie.voteAverage).isEqualTo(remoteMovieWithNullDate.vote_average)
+        assertThat(localMovie.voteAverage).isEqualTo(remoteMovieWithNullDate.voteAverage)
         assertThat(localMovie.releaseDate).isEqualTo("")
     }
 }

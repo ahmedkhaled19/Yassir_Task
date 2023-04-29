@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
  * Created by Ahmed Khaled on 12/2/20.
  */
 
-data class RemoteMovies(var id: Long) {
+data class RemoteMovies(var id: Int) {
 
     @SerializedName("adult")
     var adult: Boolean? = false

@@ -43,10 +43,7 @@ object NetworkModule {
             }
 
 
-//        if (BuildConfig.DEBUG) {
-//            builder.addInterceptor(loggingInterceptor)
-//        }
-
+        builder.addInterceptor(loggingInterceptor)
         return builder.build()
     }
 

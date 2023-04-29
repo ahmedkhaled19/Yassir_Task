@@ -9,7 +9,7 @@ object MoviesFixture {
         title = "The one"
         poster_path = "/the_one_poster_image"
         overview = "a person who lost in the dark world"
-        vote_average = 9.8
+        voteAverage = 9.8
         release_date = "2004-06-29"
     }
 
@@ -18,7 +18,7 @@ object MoviesFixture {
         title = null
         poster_path = "/the_one_poster_image"
         overview = "a person who lost in the dark world"
-        vote_average = 9.8
+        voteAverage = 9.8
         release_date = "2004-06-29"
     }
 
@@ -27,7 +27,7 @@ object MoviesFixture {
         title = "The one"
         poster_path = "/the_one_poster_image"
         overview = "a person who lost in the dark world"
-        vote_average = 9.8
+        voteAverage = 9.8
         release_date = null
     }
 

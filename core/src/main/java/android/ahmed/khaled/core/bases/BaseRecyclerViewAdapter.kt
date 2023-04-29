@@ -24,8 +24,10 @@ abstract class BaseRecyclerViewAdapter<T>(
     areItemsContentsTheSame: (T, T) -> Boolean = { oldItem, newItem -> oldItem == newItem },
 ) : ListAdapter<T, BaseRecyclerViewAdapter.BaseViewHolder>(
     AsyncDifferConfig.Builder(object : DiffUtil.ItemCallback<T>() {
-        override fun areItemsTheSame(oldItem: T, newItem: T) = areItemsTheSame(oldItem, newItem)
-        override fun areContentsTheSame(oldItem: T, newItem: T) =
+        override fun areItemsTheSame(oldItem: T, newItem: T): Boolean =
+            areItemsTheSame(oldItem, newItem)
+
+        override fun areContentsTheSame(oldItem: T, newItem: T): Boolean =
             areItemsContentsTheSame(oldItem, newItem)
     }).setBackgroundThreadExecutor(Executors.newFixedThreadPool(3)).build()
 ) {
@@ -39,7 +41,7 @@ abstract class BaseRecyclerViewAdapter<T>(
     }
 
     override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
-        bind(holder.itemView, getItem(position), position)
+        bind(holder.itemView, currentList[position], position)
     }
 
 
