@@ -78,7 +78,7 @@ class MovieDetailFragment : BaseFragment() {
         binding.fragmentMovieDetailName.text = movie.movieTitle
         binding.fragmentMovieDetailOriginalName.text = movie.movieOriginalTitle
         binding.fragmentMovieDetailDate.text = movie.releaseDate
-        binding.fragmentMovieDetailVoteAverage.text = movie.voteAverage.toString()
+        binding.fragmentMovieDetailVoteAverage.text = String.format("%.1f", movie.voteAverage)
         binding.fragmentMovieDetailVoteCount.text = movie.voteCount.toString()
         binding.fragmentMovieDetailOverview.text = movie.overview
     }

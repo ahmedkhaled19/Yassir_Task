@@ -26,9 +26,6 @@ class MoviesAdapter(val onMovieSelect: ((selectedMovie: Movie, selectedMovieId: 
             .load(item.posterPath)
             .into(binding.itemMoviePoster)
 
-        binding.itemMovieName.text = item.movieTitle
-        binding.itemMovieDate.text = item.releaseDate
-
         view.setOnClickListener {
             onMovieSelect(item, item.externalId)
         }
